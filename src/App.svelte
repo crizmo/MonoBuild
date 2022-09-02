@@ -52,7 +52,7 @@
 <main>
   <h1>MonoBuild</h1>
   <img src={monoSvg} alt="mono" />
-  <button on:click={load}>Random</button>
+  <button on:click={load}>Build</button>
 </main>
 
 <style>
@@ -80,16 +80,18 @@
     font-weight: bold;
     border: none;
     background: none;
-    color: #fff;
+    color: rgb(0, 0, 0);
     padding: 0.5rem 1rem;
     border-radius: 5px;
     cursor: pointer;
     transition: all 0.2s ease-in-out;
     margin-top: 10px;
+    background-color: #fff;
   }
 
   button:hover {
-    background: #fff;
-    color: #000;
+    background-color: #f5f5f5;
+    transition: all 0.2s ease-in-out;
+    transform: scale(1.05);
   }
 </style>
