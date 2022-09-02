@@ -1,10 +1,10 @@
 <script>
   // @ts-ignore
   import unit from '../src/assets/MonoBuild.svg';
+  import '../src/mono.css';
 
   let items = [1,2,3,'Train']
   let item = items[Math.floor(Math.random()*items.length)]
-  // console.log(item)
 
   let one = 'https://cdn.discordapp.com/attachments/784621182249992253/1015131005222391849/unknown.png'
   let two = 'https://cdn.discordapp.com/attachments/784621182249992253/1015131109144670249/unknown.png'
@@ -54,44 +54,3 @@
   <img src={monoSvg} alt="mono" />
   <button on:click={load}>Build</button>
 </main>
-
-<style>
-  main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-top: 100px;
-  }
-
-  h1 {
-    font-size: 2rem;
-    font-weight: bold;
-    margin-bottom: 1rem;
-  }
-
-  img {
-    width: 100%;
-    height: auto;
-  }
-
-  button {
-    font-size: 1.2rem;
-    font-weight: bold;
-    border: none;
-    background: none;
-    color: rgb(0, 0, 0);
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: all 0.2s ease-in-out;
-    margin-top: 10px;
-    background-color: #fff;
-  }
-
-  button:hover {
-    background-color: #f5f5f5;
-    transition: all 0.2s ease-in-out;
-    transform: scale(1.05);
-  }
-</style>
