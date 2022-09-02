@@ -5,14 +5,14 @@
 
   let items = [1,2,3,'Train']
   let item = items[Math.floor(Math.random()*items.length)]
-
+  
   let one = 'https://cdn.discordapp.com/attachments/784621182249992253/1015131005222391849/unknown.png'
   let two = 'https://cdn.discordapp.com/attachments/784621182249992253/1015131109144670249/unknown.png'
   let three = 'https://cdn.discordapp.com/attachments/784621182249992253/1015131192166715392/unknown.png'
   let train = 'https://cdn.discordapp.com/attachments/784621182249992253/1015130927619379281/unknown.png'
-
+  
   let monoSvg = unit
-
+  
   function pog(){
     item = items[Math.floor(Math.random()*items.length)]
     if (item === 'Train') {
@@ -24,9 +24,9 @@
     } else if (item === 3) {
       monoSvg = three
     } 
-    console.log(item)
+    // console.log(item)
   }
-
+  
   function load(){
     for (let i = 0; i < 5; i++) {
       setTimeout(() => {
@@ -44,9 +44,9 @@
     }
     setTimeout(() => {
       pog()
-    } , (5 * 1000) + 800)
+    } , (5 * 1000) + 50)
   }
-  
+
 </script>
 
 <main>
