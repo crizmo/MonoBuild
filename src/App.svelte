@@ -4,7 +4,7 @@
   import '../src/mono.css';
 
   let items = [1,2,3,'Train']
-  let item = items[Math.floor(Math.random()*items.length)]
+  let item
   
   let one = 'https://cdn.discordapp.com/attachments/784621182249992253/1015131005222391849/unknown.png'
   let two = 'https://cdn.discordapp.com/attachments/784621182249992253/1015131109144670249/unknown.png'
@@ -12,9 +12,20 @@
   let train = 'https://cdn.discordapp.com/attachments/784621182249992253/1015130927619379281/unknown.png'
   
   let monoSvg = unit
+
+  function singleAud() {
+    var single = new Audio('/src/assets/sounds/Single.mp3');
+    single.play();
+  }
   
+  function finalAud() {
+    var final = new Audio('/src/assets/sounds/Final.mp3');
+    final.play();
+  }
+
   function pog(){
     item = items[Math.floor(Math.random()*items.length)]
+    // console.log(item)
     if (item === 'Train') {
       monoSvg = train
     } else if (item === 1) {
@@ -24,27 +35,54 @@
     } else if (item === 3) {
       monoSvg = three
     } 
-    // console.log(item)
+  }
+
+  function finalRun(){
+    for (let i = 0; i < 3; i++) {
+      setTimeout(() => {
+        monoSvg = one
+      }, i * 550)
+      setTimeout(() => {
+        monoSvg = two
+      }, (i * 550) + 200)
+      setTimeout(() => {
+        monoSvg = three
+      }, (i * 550) + 400)
+      setTimeout(() => {
+        monoSvg = train
+      }, (i * 550) + 600)
+    }
+    // console.log("total time in seconds: " + (3 * 550) / 1000)
   }
   
   function load(){
     for (let i = 0; i < 5; i++) {
       setTimeout(() => {
         monoSvg = one
+        singleAud()
       }, i * 1000)
       setTimeout(() => {
         monoSvg = two
+        singleAud()
       }, (i * 1000) + 200)
       setTimeout(() => {
         monoSvg = three
+        singleAud()
       }, (i * 1000) + 400)
       setTimeout(() => {
         monoSvg = train
+        singleAud()
       }, (i * 1000) + 600)
     }
+
+    setTimeout(() => {
+      finalAud()
+      finalRun()
+    }, 5000)
+
     setTimeout(() => {
       pog()
-    } , (5 * 1000) + 50)
+    } , (7 * 1000) + 50)
   }
 
 </script>
