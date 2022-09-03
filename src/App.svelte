@@ -14,12 +14,12 @@
   let monoSvg = unit
 
   function singleAud() {
-    var single = new Audio('/src/assets/sounds/Single.mp3');
+    var single = new Audio('https://media.vocaroo.com/mp3/1okRPHtAoFOl');
     single.play();
   }
   
   function finalAud() {
-    var final = new Audio('/src/assets/sounds/Final.mp3');
+    var final = new Audio('https://media.vocaroo.com/mp3/1frfuxBZ4LzR');
     final.play();
   }
 
