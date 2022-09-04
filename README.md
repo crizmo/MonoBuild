@@ -9,8 +9,3 @@ MonoBuild is a replacement website for the monopoly city build unit.
 2 ] Replit
 - Full :- https://monobuild.kurizu.repl.co/
 - Beta :- https://monobuild.kurizu.repl.co/beta
-
-* Repl link
-[https://monobuild.kurizu.repl.co/](https://monobuild.kurizu.repl.co/)
-* Vercel link
-[https://monobuild.vercel.app/](https://monobuild.vercel.app/)
