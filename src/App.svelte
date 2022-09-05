@@ -1,8 +1,8 @@
 <script>
   import {Route} from 'tinro'; 
 
-  import Full from '../src/lib/full.svelte';
-  import Beta from '../src/lib/beta.svelte';
+  import Full from './routes/full.svelte';
+  import Beta from './routes/beta.svelte';
 </script>
 
 <main>
