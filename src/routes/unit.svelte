@@ -40,19 +40,19 @@
         for (let i = 0; i < 4; i++) {
             setTimeout(() => {
                 monoSvg = one;
-            }, i * 550);
+            }, i * 700);
             setTimeout(() => {
                 monoSvg = two;
-            }, i * 550 + 200);
+            }, i * 700 + 200);
             setTimeout(() => {
                 monoSvg = three;
-            }, i * 550 + 400);
+            }, i * 700 + 400);
             setTimeout(() => {
                 monoSvg = train;
-            }, i * 550 + 600);
+            }, i * 700 + 600);
             setTimeout(() => {
                 monoSvg = one;
-            }, i * 550 + 800);
+            }, i * 700 + 800);
         }
         // console.log("total time in seconds: " + (3 * 550) / 1000)
     }
@@ -62,16 +62,16 @@
         for (let i = 0; i < 3; i++) {
             setTimeout(() => {
                 monoSvg = one;
-            }, i * 850);
+            }, i * 750);
             setTimeout(() => {
                 monoSvg = two;
-            }, i * 850 + 200);
+            }, i * 750 + 200);
             setTimeout(() => {
                 monoSvg = three;
-            }, i * 850 + 400);
+            }, i * 750 + 400);
             setTimeout(() => {
                 monoSvg = train;
-            }, i * 850 + 600);
+            }, i * 750 + 600);
         }
 
         setTimeout(() => {
