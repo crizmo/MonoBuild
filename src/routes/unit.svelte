@@ -1,30 +1,42 @@
 <script>
     // @ts-ignore
+    // @ts-ignore
+    // @ts-ignore
     import unit from "../assets/MonoBuild.svg";
     import "/src/mono.css";
+
+    // @ts-ignore
+    import one from "../assets/modes/one.svg";
+    // @ts-ignore
+    import two from "../assets/modes/two.svg";
+    // @ts-ignore
+    import three from "../assets/modes/three.svg";
+    // @ts-ignore
+    import train from "../assets/modes/rail.svg";
 
     let items = [1, 2, 3, "Train"];
     let item;
 
-    let one =
-        "https://cdn.discordapp.com/attachments/784621182249992253/1015131005222391849/unknown.png";
-    let two =
-        "https://cdn.discordapp.com/attachments/784621182249992253/1015131109144670249/unknown.png";
-    let three =
-        "https://cdn.discordapp.com/attachments/784621182249992253/1015131192166715392/unknown.png";
-    let train =
-        "https://cdn.discordapp.com/attachments/784621182249992253/1015130927619379281/unknown.png";
+    // let one =
+    //     "https://media.discordapp.net/attachments/1014539635805929492/1107176426047819786/one.png";
+    // let two =
+    //     "https://cdn.discordapp.com/attachments/1014539635805929492/1107176425838100500/two.png";
+    // let three =
+    //     "https://cdn.discordapp.com/attachments/1014539635805929492/1107176425611603988/three.png";
+    // let train =
+    //     "https://cdn.discordapp.com/attachments/1014539635805929492/1107176425326399580/rail.png";
 
-    let monoSvg = unit;
+    let monoSvg =
+        "https://cdn.discordapp.com/attachments/1014539635805929492/1107176426270109768/blank.png";
 
-    function FullAud(){
-        var full = new Audio('https://media.vocaroo.com/mp3/1kxpPMbBbBVO')
-        full.play()
+    function FullAud() {
+        var full = new Audio("https://media.vocaroo.com/mp3/1kxpPMbBbBVO");
+        full.play();
     }
 
     function pog() {
         item = items[Math.floor(Math.random() * items.length)];
-        console.log(item)
+        console.log(item);
         if (item === "Train") {
             monoSvg = train;
         } else if (item === 1) {
@@ -58,7 +70,7 @@
     }
 
     function load() {
-        FullAud()
+        FullAud();
         for (let i = 0; i < 3; i++) {
             setTimeout(() => {
                 monoSvg = one;
@@ -82,10 +94,39 @@
             pog();
         }, 5 * 1000 + 50);
     }
+
+    function auction() {
+        for (let i = 0; i < 22.228; i++) {
+            setTimeout(() => {
+                monoSvg = one;
+            }, i * 900);
+            setTimeout(() => {
+                monoSvg = two;
+            }, i * 900 + 200);
+            setTimeout(() => {
+                monoSvg = three;
+            }, i * 900 + 400);
+            setTimeout(() => {
+                monoSvg = train;
+            }, i * 900 + 600);
+        }
+        console.log("total time in seconds: " + (22.228 * 900) / 1000);
+    }
 </script>
 
 <main>
     <h1>MonoBuild</h1>
     <img src={monoSvg} alt="mono" />
-    <button on:click={load}>Build</button>
+
+    <div
+        class="box"
+        style="display: flex; justify-content: space-between; width: 100%; margin-top: 20px; margin-bottom: 20px;"
+    >
+        <div
+            class="left"
+            style="width: 100%; display: flex; justify-content: center; align-items: center; flex-direction: column;"
+        >
+            <button on:click={load}>Build</button>
+        </div>
+    </div>
 </main>
